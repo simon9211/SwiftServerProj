@@ -63,8 +63,9 @@ open class DatabaseManager {
     
     // insert
     func insertDatabaseSQL(tableName: String, key: String, value: String) -> (success: Bool, mysqlResult: MySQL.Results?, errorMsg: String) {
-        let SQL: String = "INSERT INTO \(tableName) \(key) VALUES (\(value))"
+        let SQL: String = "INSERT INTO \(tableName) \(key) VALUES(\(value))"
         return mysqlStatement(SQL)
+        //@"insert into Media (userId, sacId, checkId, httpUrl, fileUrl, startTime, mediaType, status, type, attributeId) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     }
     
     // delete

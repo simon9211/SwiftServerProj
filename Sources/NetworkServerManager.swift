@@ -4,27 +4,23 @@
 //
 //  Created by xiwang wang on 2018/1/5.
 //
-
+import Foundation
 import PerfectLib
 import PerfectHTTP
 import PerfectHTTPServer
 
 open class NetworkServerManager{
     fileprivate var server: HTTPServer
+    fileprivate var databaseManager: DatabaseManager
     internal init(root: String, port: UInt16) {
         server = HTTPServer()
+        databaseManager = DatabaseManager()
         var routes = Routes(baseUri: "/api")
         configure(routes: &routes)
         server.addRoutes(routes)
         server.serverPort = port
         server.documentRoot = root
-        
-        //        do {
-        //            server.setResponseFilters([(try HTTPFilter.custom404(data: ["String" : "Any"]),HTTPFilterPriority.high)])
-        //        } catch {
-        //        }
         server.setResponseFilters([(Filter404(),.high)])
-        //        server.setRequestFilters(<#T##request: [(HTTPRequestFilter, HTTPFilterPriority)]##[(HTTPRequestFilter, HTTPFilterPriority)]#>)
     }
     
     //MARK: 开启服务
@@ -50,10 +46,30 @@ open class NetworkServerManager{
         }
         
         routes.add(method: .get, uri: "/home") { (request, response) in
-            let result = DatabaseManager().mysqlGetHomeDataResult()
+            let result = self.databaseManager.mysqlGetHomeDataResult()
             let jsonString = self.baseResponseBodyJSONData(status: 200, message: "successed", data: result)
             response.setBody(string: jsonString)
+            response.setHeader(.contentType, value: "application/json")
             response.completed()
+        }
+        
+        routes.add(method: .post, uri: "/register") { (request, response) in
+            let params = request.postParams[0].0
+            let jsonData: Data = params.data(using: .utf8)!
+            let dict: Dictionary<String,String> = try! JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as! Dictionary
+            //let result = self.databaseManager.insertDatabaseSQL(tableName: table_account, key: dict["level_id"]!, value: dict["name"]!)
+            //@"insert into Media (userId, sacId, checkId, httpUrl, fileUrl, startTime, mediaType, status, type, attributeId) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            let result = self.databaseManager.insertDatabaseSQL(tableName: table_account, key: "('name','level_id')", value: "'\(dict["name"]!)','\(dict["level_id"]!)'")
+            if result.success {
+                let jsonString = self.baseResponseBodyJSONData(status: 200, message: "successed", data: "register successed")
+                response.setBody(string: jsonString)
+                response.setHeader(.contentType, value: "application/json")
+                response.completed()
+            } else {
+                response.completed(status: .badRequest)
+                return
+            }
+            
         }
     }
     
