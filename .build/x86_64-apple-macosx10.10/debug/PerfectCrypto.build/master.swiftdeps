@@ -1,0 +1,11 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
+options: "5f90dcd3785e56dd96a12ba941ea2498"
+build_time: [1515140452, 294536000]
+inputs:
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/PerfectCrypto/Algorithms.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/PerfectCrypto/ByteIO.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/PerfectCrypto/Extensions.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/PerfectCrypto/JWT.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/PerfectCrypto/Keys.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/PerfectCrypto/OpenSSLInternal.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/Perfect-Crypto.git--5196635702121641122/Sources/PerfectCrypto/PerfectCrypto.swift": [1515140439, 0]

@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
+options: "eedc2b4fd9d4269bda6911acb4ff801b"
+build_time: [1515140463, 884734000]
+inputs:
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/Perfect-Mustache.git-4271886153857801499/Sources/HTTPResponseExtension.swift": [1515140437, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/Perfect-Mustache.git-4271886153857801499/Sources/Mustache.swift": [1515140437, 0]

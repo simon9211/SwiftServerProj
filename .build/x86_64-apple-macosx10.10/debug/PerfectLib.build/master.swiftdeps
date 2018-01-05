@@ -1,0 +1,14 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
+options: "7ae7c98f99be1e9f495e561e6e3947c2"
+build_time: [1515140446, 690211000]
+inputs:
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/PerfectLib.git-3712999737848873669/Sources/PerfectLib/Bytes.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/PerfectLib.git-3712999737848873669/Sources/PerfectLib/Dir.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/PerfectLib.git-3712999737848873669/Sources/PerfectLib/File.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/PerfectLib.git-3712999737848873669/Sources/PerfectLib/JSONConvertible.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/PerfectLib.git-3712999737848873669/Sources/PerfectLib/Log.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/PerfectLib.git-3712999737848873669/Sources/PerfectLib/PerfectError.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/PerfectLib.git-3712999737848873669/Sources/PerfectLib/PerfectServer.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/PerfectLib.git-3712999737848873669/Sources/PerfectLib/SwiftCompatibility.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/PerfectLib.git-3712999737848873669/Sources/PerfectLib/SysProcess.swift": [1515140439, 0]
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/checkouts/PerfectLib.git-3712999737848873669/Sources/PerfectLib/Utilities.swift": [1515140439, 0]
