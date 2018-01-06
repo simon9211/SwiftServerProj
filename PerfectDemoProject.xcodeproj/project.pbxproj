@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DAF9DA322000C6C1008A709E /* LevelTableOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9DA302000C6B3008A709E /* LevelTableOperationManager.swift */; };
+		DAF9DA342000F933008A709E /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9DA332000F933008A709E /* Routes.swift */; };
+		DAF9DA362000F976008A709E /* Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9DA352000F976008A709E /* Handlers.swift */; };
+		DAF9DA3820010688008A709E /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9DA3720010688008A709E /* FilterManager.swift */; };
 		OBJ_1000 /* ofb_enc.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_311 /* ofb_enc.c */; };
 		OBJ_1001 /* openbsd_hw.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_312 /* openbsd_hw.c */; };
 		OBJ_1002 /* p12_.c in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_313 /* p12_.c */; };
@@ -921,6 +924,9 @@
 /* Begin PBXFileReference section */
 		"COpenSSL::COpenSSL::Product" /* COpenSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = COpenSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF9DA302000C6B3008A709E /* LevelTableOperationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelTableOperationManager.swift; sourceTree = "<group>"; };
+		DAF9DA332000F933008A709E /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		DAF9DA352000F976008A709E /* Handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handlers.swift; sourceTree = "<group>"; };
+		DAF9DA3720010688008A709E /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		"MySQLStORM::MySQLStORM::Product" /* MySQLStORM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MySQLStORM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		OBJ_100 /* crc32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = crc32.c; sourceTree = "<group>"; };
@@ -2087,6 +2093,9 @@
 				OBJ_8 /* DatabaseManager.swift */,
 				OBJ_9 /* NetworkServerManager.swift */,
 				DAF9DA302000C6B3008A709E /* LevelTableOperationManager.swift */,
+				DAF9DA3720010688008A709E /* FilterManager.swift */,
+				DAF9DA332000F933008A709E /* Routes.swift */,
+				DAF9DA352000F976008A709E /* Handlers.swift */,
 				OBJ_10 /* main.swift */,
 			);
 			path = Sources;
@@ -2970,7 +2979,10 @@
 			files = (
 				OBJ_528 /* DatabaseManager.swift in Sources */,
 				OBJ_529 /* NetworkServerManager.swift in Sources */,
+				DAF9DA362000F976008A709E /* Handlers.swift in Sources */,
+				DAF9DA342000F933008A709E /* Routes.swift in Sources */,
 				DAF9DA322000C6C1008A709E /* LevelTableOperationManager.swift in Sources */,
+				DAF9DA3820010688008A709E /* FilterManager.swift in Sources */,
 				OBJ_530 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

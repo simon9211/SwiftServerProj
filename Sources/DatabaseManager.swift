@@ -30,9 +30,9 @@ open class DatabaseManager {
             return false
         }
         
-//        defer {
-//            mysql.close() //这个延后操作能够保证在程序结束时无论什么结果都会自动关闭数据库连接
-//        }
+        defer {
+            mysql.close() //这个延后操作能够保证在程序结束时无论什么结果都会自动关闭数据库连接
+        }
         print("MySQL connected successed")
         return true
     }
@@ -41,6 +41,7 @@ open class DatabaseManager {
     @discardableResult
     func mysqlStatement(_ sql: String) -> (success: Bool, mysqlResult: MySQL.Results?, errorMsg: String) {
         var msg: String
+        
         guard mysql.selectDatabase(named: mysqlDatabase) else {
             msg = "not found \(mysqlDatabase) database"
             print(msg)
