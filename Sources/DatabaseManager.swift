@@ -7,26 +7,24 @@
 
 import PerfectMySQL
 
-let mysql_host = "0.0.0.0"
-let mysql_user = "root"
-let mysql_pwd = "simon0919"
-let mysql_database = "TianProject"
 
-let table_account = "account_level"
 
 open class DatabaseManager {
     
     fileprivate var mysql: MySQL
+    var mysqlHost: String = "0.0.0.0"
+    var mysqlUser: String = "root"
+    var mysqlPwd: String = "simon0919"
+    var mysqlDatabase: String = "TianProject"
+    var mysqlPort: UInt32 = 3306
+    var tableName: String = "account_level"
     internal init() {
         mysql = MySQL.init()
-        guard connectedDatabase() else {
-            return
-        }
     }
     
     //MARK: 开启连接
-    private func connectedDatabase() -> Bool {
-        let connected = mysql.connect(host: mysql_host, user: mysql_user, password: mysql_pwd, db: mysql_database, port: 3306, socket: nil, flag: 0)
+    func connectedDatabase() -> Bool {
+        let connected = mysql.connect(host: mysqlHost, user: mysqlUser, password: mysqlPwd, db: mysqlDatabase, port: mysqlPort, socket: nil, flag: 0)
         guard connected else {
             print("MySQL connected failed" + mysql.errorMessage())
             return false
@@ -43,8 +41,8 @@ open class DatabaseManager {
     @discardableResult
     func mysqlStatement(_ sql: String) -> (success: Bool, mysqlResult: MySQL.Results?, errorMsg: String) {
         var msg: String
-        guard mysql.selectDatabase(named: mysql_database) else {
-            msg = "not found \(mysql_database) database"
+        guard mysql.selectDatabase(named: mysqlDatabase) else {
+            msg = "not found \(mysqlDatabase) database"
             print(msg)
             return (false, nil, msg)
         }
@@ -65,7 +63,6 @@ open class DatabaseManager {
     func insertDatabaseSQL(tableName: String, key: String, value: String) -> (success: Bool, mysqlResult: MySQL.Results?, errorMsg: String) {
         let SQL: String = "INSERT INTO \(tableName) \(key) VALUES(\(value))"
         return mysqlStatement(SQL)
-        //@"insert into Media (userId, sacId, checkId, httpUrl, fileUrl, startTime, mediaType, status, type, attributeId) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     }
     
     // delete
@@ -84,19 +81,6 @@ open class DatabaseManager {
     func queryAllDatabaseSQL(tableName: String) -> (success: Bool, mysqlResult: MySQL.Results?, errorMsg: String) {
         let SQL = "SELECT * FROM \(tableName)"
         return mysqlStatement(SQL)
-    }
-    
-    // 查看account_level表中所有数据
-    func mysqlGetHomeDataResult() -> [Dictionary<String, String>]? {
-        let result = queryAllDatabaseSQL(tableName: table_account)
-        var resultArray = [Dictionary<String, String>]()
-        var dict = [String:String]()
-        result.mysqlResult?.forEachRow(callback: { (row) in
-            dict["level_id"] = row[0]
-            dict["name"] = row[1];
-            resultArray.append(dict)
-        })
-        return resultArray
     }
 }
 

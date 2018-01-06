@@ -11,10 +11,10 @@ import PerfectHTTPServer
 
 open class NetworkServerManager{
     fileprivate var server: HTTPServer
-    fileprivate var databaseManager: DatabaseManager
+    fileprivate var databaseManager: LevelTableOperationManager
     internal init(root: String, port: UInt16) {
+        databaseManager = LevelTableOperationManager.shareManager
         server = HTTPServer()
-        databaseManager = DatabaseManager()
         var routes = Routes(baseUri: "/api")
         configure(routes: &routes)
         server.addRoutes(routes)
@@ -54,13 +54,11 @@ open class NetworkServerManager{
         }
         
         routes.add(method: .post, uri: "/register") { (request, response) in
-            let params = request.postParams[0].0
-            let jsonData: Data = params.data(using: .utf8)!
-            let dict: Dictionary<String,String> = try! JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as! Dictionary
-            //let result = self.databaseManager.insertDatabaseSQL(tableName: table_account, key: dict["level_id"]!, value: dict["name"]!)
-            //@"insert into Media (userId, sacId, checkId, httpUrl, fileUrl, startTime, mediaType, status, type, attributeId) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            let result = self.databaseManager.insertDatabaseSQL(tableName: table_account, key: "('name','level_id')", value: "'\(dict["name"]!)','\(dict["level_id"]!)'")
-            if result.success {
+            let params = request.postBodyString
+            let dict: Dictionary<String,Any> = try! JSONSerialization.jsonObject(with: params!.data(using: String.Encoding.utf8)!, options: .mutableContainers) as! Dictionary
+            let level: LevelModel = LevelModel(dict: dict)
+            let result = self.databaseManager.insertToLevelTable(level: level)
+            if result {
                 let jsonString = self.baseResponseBodyJSONData(status: 200, message: "successed", data: "register successed")
                 response.setBody(string: jsonString)
                 response.setHeader(.contentType, value: "application/json")

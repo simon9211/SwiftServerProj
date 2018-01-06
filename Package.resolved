@@ -11,6 +11,24 @@
         }
       },
       {
+        "package": "MySQLStORM",
+        "repositoryURL": "https://github.com/SwiftORM/MySQL-StORM",
+        "state": {
+          "branch": null,
+          "revision": "7452479fccabb0b25cbb073ba184ea3a10ef2d48",
+          "version": "3.0.2"
+        }
+      },
+      {
+        "package": "PerfectCURL",
+        "repositoryURL": "https://github.com/PerfectlySoft/Perfect-CURL.git",
+        "state": {
+          "branch": null,
+          "revision": "b8a7f792cbacf6ce8867958a875952784cb3627e",
+          "version": "3.0.1"
+        }
+      },
+      {
         "package": "PerfectCZlib",
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-CZlib-src.git",
         "state": {
@@ -56,6 +74,15 @@
         }
       },
       {
+        "package": "PerfectLogger",
+        "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Logger.git",
+        "state": {
+          "branch": null,
+          "revision": "ced0f754f1f22cd2f72285b1e31eeb52fea5234a",
+          "version": "3.0.0"
+        }
+      },
+      {
         "package": "PerfectMustache",
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Mustache.git",
         "state": {
@@ -89,6 +116,33 @@
           "branch": null,
           "revision": "1846390a47bfe0c5263bb70ba318b2bbe751ac95",
           "version": "3.0.2"
+        }
+      },
+      {
+        "package": "StORM",
+        "repositoryURL": "https://github.com/SwiftORM/StORM.git",
+        "state": {
+          "branch": null,
+          "revision": "a5efa7bbf09e030bc47e59e8e62f5483c01bcd64",
+          "version": "3.0.1"
+        }
+      },
+      {
+        "package": "SwiftMoment",
+        "repositoryURL": "https://github.com/iamjono/SwiftMoment.git",
+        "state": {
+          "branch": null,
+          "revision": "226268d83f3c98213dd0f93d5cfb2353b28f68e7",
+          "version": "0.9.1"
+        }
+      },
+      {
+        "package": "cURL",
+        "repositoryURL": "https://github.com/PerfectlySoft/Perfect-libcurl.git",
+        "state": {
+          "branch": null,
+          "revision": "672f6695d9ae04fce16ad01decef0649e0b872b0",
+          "version": "2.0.6"
         }
       },
       {

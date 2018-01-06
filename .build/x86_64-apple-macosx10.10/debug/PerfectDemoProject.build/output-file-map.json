@@ -2,6 +2,18 @@
   "": {
     "swift-dependencies": "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/x86_64-apple-macosx10.10/debug/PerfectDemoProject.build/master.swiftdeps"
   },
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/Sources/DatabaseManager.swift": {
+    "dependencies": "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/x86_64-apple-macosx10.10/debug/PerfectDemoProject.build/DatabaseManager.d",
+    "object": "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/x86_64-apple-macosx10.10/debug/PerfectDemoProject.build/DatabaseManager.swift.o",
+    "swiftmodule": "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/x86_64-apple-macosx10.10/debug/PerfectDemoProject.build/DatabaseManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/x86_64-apple-macosx10.10/debug/PerfectDemoProject.build/DatabaseManager.swiftdeps"
+  },
+  "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/Sources/NetworkServerManager.swift": {
+    "dependencies": "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/x86_64-apple-macosx10.10/debug/PerfectDemoProject.build/NetworkServerManager.d",
+    "object": "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/x86_64-apple-macosx10.10/debug/PerfectDemoProject.build/NetworkServerManager.swift.o",
+    "swiftmodule": "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/x86_64-apple-macosx10.10/debug/PerfectDemoProject.build/NetworkServerManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/x86_64-apple-macosx10.10/debug/PerfectDemoProject.build/NetworkServerManager.swiftdeps"
+  },
   "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/Sources/main.swift": {
     "dependencies": "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/x86_64-apple-macosx10.10/debug/PerfectDemoProject.build/main.d",
     "object": "/Users/xiwangwang/Documents/iOS/SwiftServer/projects/SwiftPerfectProj/.build/x86_64-apple-macosx10.10/debug/PerfectDemoProject.build/main.swift.o",
