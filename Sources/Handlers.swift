@@ -86,6 +86,21 @@ public class CustomHandlers {
         }
     }
     
+    open static func LevelSelectHandlerGet(request: HTTPRequest, _ response: HTTPResponse) {
+        let params = request.postBodyString
+        do {
+            let dict: Dictionary<String, Any> = try params?.jsonDecode() as! [String:Any]
+            let level: LevelModel = LevelModel(dict:dict)
+            let res = LevelTableOperationManager.shareManager.selectLevelTabel(level: level)
+            let jsonString = baseResponseBodyJSONData(status: 200, message: "successed", data: res)
+            response.setBody(string: jsonString)
+            response.setHeader(.contentType, value: "application/json")
+            response.completed()
+        } catch {
+            
+        }
+    }
+    
     //MARK: 通用响应格式
     static func baseResponseBodyJSONData(status: Int, message: String, data: Any!) -> String {
         var result = Dictionary<String, Any>()

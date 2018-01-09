@@ -15,6 +15,7 @@ public func makeRoutes() -> Routes {
     routes.add(method: .post, uri: "/register", handler: CustomHandlers.LevelInsertHandlerGet)
     routes.add(method: .post, uri: "/delete", handler: CustomHandlers.LevelDeleteHandlerGet)
     routes.add(method: .post, uri: "/update", handler: CustomHandlers.LevelUpdateHandlerGet)
+    routes.add(method: .post, uri: "/select", handler: CustomHandlers.LevelSelectHandlerGet)
     return routes
 }
 

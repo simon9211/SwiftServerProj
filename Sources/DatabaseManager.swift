@@ -30,9 +30,9 @@ open class DatabaseManager {
             return false
         }
         
-        defer {
-            mysql.close() //这个延后操作能够保证在程序结束时无论什么结果都会自动关闭数据库连接
-        }
+//        defer {
+//            mysql.close() //这个延后操作能够保证在程序结束时无论什么结果都会自动关闭数据库连接
+//        }
         print("MySQL connected successed")
         return true
     }
@@ -81,6 +81,12 @@ open class DatabaseManager {
     // query all
     func queryAllDatabaseSQL(tableName: String) -> (success: Bool, mysqlResult: MySQL.Results?, errorMsg: String) {
         let SQL = "SELECT * FROM \(tableName)"
+        return mysqlStatement(SQL)
+    }
+    
+    // select
+    func selectDatabaseSQL(tableName: String, whereKey: String, whereValue: String) -> (success: Bool, mysqlResult: MySQL.Results?, errorMsg: String) {
+        let SQL = "SELECT * FROM \(tableName) WHERE \(whereKey) = '\(whereValue)'"
         return mysqlStatement(SQL)
     }
 }

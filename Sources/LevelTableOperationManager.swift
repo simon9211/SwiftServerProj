@@ -57,6 +57,22 @@ class LevelTableOperationManager {
         return false
     }
     
+    func selectLevelTabel(level: LevelModel) -> [Dictionary<String, Any>]? {
+        let res = databaseManager.selectDatabaseSQL(tableName: table_name, whereKey: "level_id", whereValue: "\(level.level_id)")
+        if res.success {
+            var resultArray = [Dictionary<String, Any>]()
+            var dict = [String:Any]()
+            res.mysqlResult?.forEachRow(callback: { (row) in
+                dict["level_id"] = Int(row[0]!)
+                dict["name"] = row[1]
+                resultArray.append(dict)
+            })
+            return resultArray
+        }
+        print("slelct error tableName \(table_name), model \(level)")
+        return nil
+    }
+    
     // 查看account_level表中所有数据
     func mysqlGetHomeDataResult() -> [Dictionary<String, Any>]? {
         let result = self.databaseManager.queryAllDatabaseSQL(tableName: table_name)
